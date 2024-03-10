@@ -2,7 +2,6 @@ import {inject, injectable} from "inversify";
 import {Endpoint} from "../model/Endpoint";
 import SYMBOLS from "../dependency-injection/Symbols";
 import {IEndpointRepository} from "../repository/IEndpointRepository";
-import {all} from "inversify-express-utils";
 import axios, {AxiosResponse} from "axios";
 
 @injectable()

@@ -5,6 +5,7 @@ import SYMBOLS from "../dependency-injection/Symbols";
 import {EndpointService} from "../service/EndpointService";
 import {StatusCodes} from "http-status-codes";
 import {ErrorResponse} from "../error/ErrorResponse";
+import {Endpoint} from "../model/Endpoint";
 
 @controller("/v1/reachable-endpoints")
 export class EndpointController {
@@ -15,7 +16,7 @@ export class EndpointController {
     async getAllReachableEndpoints(
         @queryParam("priority") priority: string | undefined,
         req: Request,
-        res: Response): Promise<any> {
+        res: Response): Promise<Endpoint[]> {
         if (priority === undefined) {
             return this.endpointService.getAllReachableEndpointsOrderedByPriority();
         }
