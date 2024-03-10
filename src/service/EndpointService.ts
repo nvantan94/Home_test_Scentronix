@@ -22,7 +22,7 @@ export class EndpointService {
     }
 
     async getReachableEndpointsByPriority(priority: number): Promise<Endpoint[]> {
-        const allEndpointsByPriority = this.endpointRepository.getAllEndpoints().filter(e => e.priority === priority);
+        const allEndpointsByPriority = this.endpointRepository.getEndpointsByPriority(priority);
         if (allEndpointsByPriority.length === 0) {
             return [];
         }

@@ -12,4 +12,8 @@ export class LocalEndpointRepository {
     getAllEndpoints(): Endpoint[] {
         return this.endpoints;
     }
+
+    getEndpointsByPriority(priority: number): Endpoint[] {
+        return this.endpoints.filter(e => e.priority === priority);
+    }
 }
