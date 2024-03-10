@@ -1,8 +1,8 @@
-import {inject, injectable} from "inversify";
-import {Endpoint} from "../model/Endpoint";
-import SYMBOLS from "../dependency-injection/Symbols";
-import {IEndpointRepository} from "../repository/IEndpointRepository";
-import axios, {AxiosResponse} from "axios";
+import {inject, injectable} from 'inversify';
+import {Endpoint} from '../model/Endpoint';
+import SYMBOLS from '../dependency-injection/Symbols';
+import {IEndpointRepository} from '../repository/IEndpointRepository';
+import axios, {AxiosResponse} from 'axios';
 
 @injectable()
 export class EndpointService {
@@ -38,7 +38,7 @@ export class EndpointService {
         const promiseResults: PromiseSettledResult<AxiosResponse>[] = await Promise.allSettled(checkAvailabilityEndpoints);
         const reachableEndpoints : Endpoint[] = [];
         promiseResults.forEach(result  => {
-            if (result.status === "fulfilled") {
+            if (result.status === 'fulfilled') {
                 const res: AxiosResponse = result.value;
                 if (res.status >= 200 && res.status <= 299) {
                     endpoints.filter(e => e.url === res.config.url)

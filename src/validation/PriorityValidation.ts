@@ -1,7 +1,7 @@
-import {injectable} from "inversify";
-import {NextFunction, RequestHandler, Request, Response} from "express";
-import {StatusCodes} from "http-status-codes";
-import {ErrorResponse} from "../error/ErrorResponse";
+import {injectable} from 'inversify';
+import {NextFunction, RequestHandler, Request, Response} from 'express';
+import {StatusCodes} from 'http-status-codes';
+import {ErrorResponse} from '../error/ErrorResponse';
 
 @injectable()
 export class PriorityValidation {
@@ -14,7 +14,7 @@ export class PriorityValidation {
             const number: number = parseInt(priority);
 
             if (isNaN(number) || number <= 0) {
-                response.status(StatusCodes.BAD_REQUEST).json(new ErrorResponse("priority must be a positive number!"));
+                response.status(StatusCodes.BAD_REQUEST).json(new ErrorResponse('priority must be a positive number!'));
             }
 
             next();

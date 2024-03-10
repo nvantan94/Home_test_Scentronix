@@ -1,4 +1,4 @@
-import {Endpoint} from "../model/Endpoint";
+import {Endpoint} from '../model/Endpoint';
 
 export interface IEndpointRepository {
     getAllEndpoints(): Endpoint[];

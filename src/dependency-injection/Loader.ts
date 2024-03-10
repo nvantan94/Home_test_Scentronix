@@ -1,1 +1,1 @@
-import "../controller/EndpointController"
+import '../controller/EndpointController'

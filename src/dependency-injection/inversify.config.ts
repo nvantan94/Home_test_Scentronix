@@ -1,9 +1,9 @@
-import { Container } from "inversify";
-import {EndpointService} from "../service/EndpointService";
-import {LocalEndpointRepository} from "../repository/LocalEndpointRepository";
-import {IEndpointRepository} from "../repository/IEndpointRepository";
-import SYMBOLS from "./Symbols";
-import {PriorityValidation} from "../validation/PriorityValidation";
+import { Container } from 'inversify';
+import {EndpointService} from '../service/EndpointService';
+import {LocalEndpointRepository} from '../repository/LocalEndpointRepository';
+import {IEndpointRepository} from '../repository/IEndpointRepository';
+import SYMBOLS from './Symbols';
+import {PriorityValidation} from '../validation/PriorityValidation';
 
 const container = new Container();
 
