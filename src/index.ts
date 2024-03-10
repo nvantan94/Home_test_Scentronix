@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import "./dependency-injection/Loader"
 import { InversifyExpressServer } from "inversify-express-utils";
 import container from "./dependency-injection/inversify.config"
 
