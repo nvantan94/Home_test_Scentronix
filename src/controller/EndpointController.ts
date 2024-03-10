@@ -16,7 +16,7 @@ export class EndpointController {
     async getAllReachableEndpoints(
         @queryParam("priority") priority: string | undefined,
         req: Request,
-        res: Response): Promise<Endpoint[]> {
+        res: Response): Promise<Endpoint[] | undefined> {
         if (priority === undefined) {
             return this.endpointService.getAllReachableEndpointsOrderedByPriority();
         }
