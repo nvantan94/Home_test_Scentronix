@@ -1,0 +1,14 @@
+# package directories
+node_modules
+
+yarn-error.log
+.idea/*
+
+*.js.map
+
+*.js
+
+test.log
+
+#inteliJ
+*.iml
