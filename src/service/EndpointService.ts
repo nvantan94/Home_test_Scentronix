@@ -37,12 +37,13 @@ export class EndpointService {
         });
 
         const promiseResults: PromiseSettledResult<AxiosResponse>[] = await Promise.allSettled(checkAvailabilityEndpoints);
-        let reachableEndpoints : Endpoint[] = [];
+        const reachableEndpoints : Endpoint[] = [];
         promiseResults.forEach(result  => {
             if (result.status === "fulfilled") {
                 const res: AxiosResponse = result.value;
                 if (res.status >= 200 && res.status <= 299) {
-                    reachableEndpoints = reachableEndpoints.concat(endpoints.filter(e => e.url === res.config.url));
+                    endpoints.filter(e => e.url === res.config.url)
+                        .forEach(endpoint => reachableEndpoints.push(endpoint));
                 }
             }
         });
