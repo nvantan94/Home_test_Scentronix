@@ -3,7 +3,7 @@
 ## Introduction
 
 This project will create an API with details as follows:
-* /v1/reachable-endpoints: to retrieve all reachable endpoints (status code: 200 - 299)
+* /v1/reachable-endpoints: to retrieve all reachable endpoints (status code: 200 - 299 and do not timeout in 5 seconds).
 
 Query param: priority (optional) - only return reachable endpoints with the given priority
 - This field must be a positive value to pass API validation
