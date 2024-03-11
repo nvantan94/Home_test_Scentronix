@@ -7,9 +7,9 @@ This project will create an API with details as follows:
 
 Query param: priority (optional) - only return reachable endpoints with the given priority
 - This field must be a positive value to pass API validation
-- if the field is skipped, server will return all reachable endpoints. The returned endpoints are sorted in ascending of their priority.
+- If the field is skipped, server will return all reachable endpoints. The returned endpoints are sorted in ascending order of their priority.
 
-Example:
+Examples:
 * http://localhost:3000/v1/reachable-endpoints
 * http://localhost:3000/v1/reachable-endpoints?priority=3
 
