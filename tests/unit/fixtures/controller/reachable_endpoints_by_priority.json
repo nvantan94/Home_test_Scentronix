@@ -1,0 +1,12 @@
+{
+  "reachable_endpoints_by_priority": [
+    {
+      "url": "https://google.com",
+      "priority": 1
+    },
+    {
+      "url": "https://github.com",
+      "priority": 1
+    }
+  ]
+}
