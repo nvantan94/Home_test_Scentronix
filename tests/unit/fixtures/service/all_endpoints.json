@@ -1,0 +1,60 @@
+{
+  "all_endpoints": [
+    {
+      "url": "https://google.com/",
+      "priority": 1
+    },
+    {
+      "url": "https://github.com/",
+      "priority": 2
+    },
+    {
+      "url": "https://offline.scentronix.com/",
+      "priority": 2
+    },
+    {
+      "url": "https://gitlab.com/",
+      "priority": 4
+    },
+    {
+      "url": "https://doesnt-work.github.com/",
+      "priority": 3
+    }
+  ],
+  "mock_target_urls": [
+    {
+      "url": "https://google.com",
+      "status_code": 200
+    },
+    {
+      "url": "https://github.com",
+      "status_code": 204
+    },
+    {
+      "url": "https://gitlab.com",
+      "status_code": 206
+    },
+    {
+      "url": "https://offline.scentronix.com",
+      "status_code": 403
+    },
+    {
+      "url": "https://doesnt-work.github.com",
+      "status_code": 500
+    }
+  ],
+  "expected_endpoints": [
+    {
+      "url": "https://google.com/",
+      "priority": 1
+    },
+    {
+      "url": "https://github.com/",
+      "priority": 2
+    },
+    {
+      "url": "https://gitlab.com/",
+      "priority": 4
+    }
+  ]
+}

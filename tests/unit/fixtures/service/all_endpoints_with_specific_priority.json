@@ -1,0 +1,36 @@
+{
+  "all_endpoints": [
+    {
+      "url": "https://github.com/",
+      "priority": 2
+    },
+    {
+      "url": "https://offline.scentronix.com/",
+      "priority": 2
+    },
+    {
+      "url": "https://doesnt-work.github.com/",
+      "priority": 2
+    }
+  ],
+  "mock_target_urls": [
+    {
+      "url": "https://github.com",
+      "status_code": 204
+    },
+    {
+      "url": "https://doesnt-work.github.com",
+      "status_code": 500
+    },
+    {
+      "url": "https://offline.scentronix.com",
+      "status_code": 403
+    }
+  ],
+  "expected_endpoints": [
+    {
+      "url": "https://github.com/",
+      "priority": 2
+    }
+  ]
+}
