@@ -14,7 +14,7 @@ export class EndpointController {
     @httpGet('/',
         container.get<PriorityValidation>(SYMBOLS.PriorityValidation).validate())
     async getAllReachableEndpoints(
-        @queryParam('priority') priority: string | undefined): Promise<Endpoint[]> {
+        @queryParam('priority') priority?: string | undefined): Promise<Endpoint[]> {
         if (priority === undefined) {
             return this.endpointService.getAllReachableEndpointsOrderedByPriority();
         }

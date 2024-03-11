@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
-    "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
+    "target": "es2020",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "module": "commonjs",
-    "outDir": "./build",
+//    "outDir": "./build",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
   },
-  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
